@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source_files = '*.h'
   s.resource = 'VlcSdkRes.bundle'
   s.frameworks = "CoreLocation", "CoreBluetooth"
-  s.libraries = ""WoorldsSdk"
+  s.libraries = "WoorldsSdk"
   s.preserve_paths = 'libWoorldsSdk.a'
   s.xcconfig     = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/WoorldsSdk"' }
   s.dependency "AFNetworking", "~> 2.5"
