@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WoorldsSDK"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Woorlds SDK"
 
   s.description  = <<-DESC
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
             (c) Woorlds
     LICENSE
   }
-  s.author       = { "leviyehonatan" => "yehonatan@vwoorlds.com" }
+  s.author       = { "leviyehonatan" => "yehonatan@woorlds.com" }
   s.platform     = :ios, "7.0"
   s.source        = { :git => "https://github.com/woorlds-sdk/pod.git" }
   
