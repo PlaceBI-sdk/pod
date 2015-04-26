@@ -73,6 +73,3 @@ You can track the follwing events:
 - (void)trackAction:(NSString*)campaignId;
 ```
 
-example of usage:
-
-
