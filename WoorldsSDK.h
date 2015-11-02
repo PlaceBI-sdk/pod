@@ -22,10 +22,13 @@
 - (id) init;
 + (instancetype)sharedInstance;
 - (NSArray*)getSegmentation:(NSString*)campaignId;
+- (NSString*)getCampaign;
+- (void)identify:(NSString *)identity;
 - (void)trackDownload:(NSString*)campaignId;
 - (void)trackInstall:(NSString*)campaignId;
 - (void)trackClick:(NSString*)campaignId;
 - (void)trackAction:(NSString*)campaignId;
+- (void)track:(NSString*)name withData:(NSDictionary*)data;
 
 @end
 
