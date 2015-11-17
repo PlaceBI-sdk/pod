@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/woorlds-sdk/pod.git" }
 
   s.source_files = '*.h'
-  s.frameworks = ["CoreLocation", "SystemConfiguration"]
+  s.frameworks = ["CoreLocation", "SystemConfiguration", "CoreTelephony", "AdSupport"]
   s.libraries = "WoorldsSdk"
   s.preserve_paths = 'libWoorldsSdk.a'
   s.xcconfig     = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/WoorldsSdk"' }
