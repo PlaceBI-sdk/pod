@@ -16,10 +16,18 @@
 -(void)woorldsDataDidUpdate:(NSDictionary *)data;
 @end
 
+@protocol WoorldsSDKLog
+@required
+-(void)logMessage:(NSString *)message;
+@end
+
+
 
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
 @property (nonatomic, assign) id <WoorldsSDKDelegate> delegate;
+@property (nonatomic, assign) id <WoorldsSDKLog> logDelegate;
 - (id) init;
+- (NSString*)logBuffer;
 + (instancetype)sharedInstance;
 - (NSArray*)getSegmentation:(NSString*)campaignId;
 - (NSString*)getCampaign;
