@@ -9,12 +9,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "http://www.woorlds.com"
-  s.license      = {
-    :type => 'Commercial',
-    :text => <<-LICENSE
-            (c) Woorlds
-    LICENSE
-  }
+  s.license      = 'Commercial'
   s.author       = { "leviyehonatan" => "yehonatan@woorlds.com" }
   s.platform     = :ios, "7.0"
   s.source        = { :git => "https://github.com/woorlds-sdk/pod.git" }
@@ -25,4 +20,4 @@ Pod::Spec.new do |s|
   s.libraries = "WoorldsSdk"
   s.preserve_paths = 'libWoorldsSdk.a'
   s.xcconfig     = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/WoorldsSdk"' }
-  d
+end
