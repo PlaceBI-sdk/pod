@@ -39,7 +39,9 @@
 - (void)trackClick:(NSString*)campaignId;
 - (void)trackAction:(NSString*)campaignId;
 - (void)track:(NSString*)name withData:(NSDictionary*)data;
-
+- (void)emptyFindRefind;
+- (void)processLaunchOptions:(NSDictionary*)launchOptions;
+- (void)processUserInfo:(NSDictionary*) userInfo;
 @end
 
 #endif
