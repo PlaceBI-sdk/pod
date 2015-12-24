@@ -26,8 +26,10 @@
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
 @property (nonatomic, assign) id <WoorldsSDKDelegate> delegate;
 @property (nonatomic, assign) id <WoorldsSDKLog> logDelegate;
+- (void)setLogEnabled:(BOOL) enabled;
 - (id) init;
 - (NSString*)logBuffer;
+- (void)resetLog;
 + (instancetype)sharedInstance;
 - (NSArray*)getSegmentation:(NSString*)campaignId;
 - (NSString*)getCampaign;
