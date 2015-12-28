@@ -16,32 +16,30 @@
 -(void)woorldsDataDidUpdate:(NSDictionary *)data;
 @end
 
-@protocol WoorldsSDKLog
-@required
--(void)logMessage:(NSString *)message;
-@end
-
-
-
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
-@property (nonatomic, assign) id <WoorldsSDKDelegate> delegate;
-@property (nonatomic, assign) id <WoorldsSDKLog> logDelegate;
-- (void)setLogEnabled:(BOOL) enabled;
 - (id) init;
-- (NSString*)logBuffer;
-- (void)resetLog;
+
 + (instancetype)sharedInstance;
+
 - (NSArray*)getSegmentation:(NSString*)campaignId;
 - (NSString*)getCampaign;
+- (NSArray*)getPlaces;
+
 - (void)identify:(NSString *)identity;
 - (void)trackDownload:(NSString*)campaignId;
 - (void)trackInstall:(NSString*)campaignId;
 - (void)trackClick:(NSString*)campaignId;
 - (void)trackAction:(NSString*)campaignId;
 - (void)track:(NSString*)name withData:(NSDictionary*)data;
-- (void)emptyFindRefind;
 - (void)processLaunchOptions:(NSDictionary*)launchOptions;
+
 - (void)processUserInfo:(NSDictionary*) userInfo;
+
+- (void)setLogEnabled:(BOOL) enabled;
+- (NSString*)logBuffer;
+- (void)resetLog;
+
+- (void)emptyFindRefind;
 @end
 
 #endif
