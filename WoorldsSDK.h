@@ -11,11 +11,6 @@
 
 #import <CoreLocation/CoreLocation.h>
 
-@protocol WoorldsSDKDelegate
-@required
--(void)woorldsDataDidUpdate:(NSDictionary *)data;
-@end
-
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
 - (id) init;
 
