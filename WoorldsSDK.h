@@ -35,6 +35,10 @@
 - (void)resetLog;
 
 - (void)emptyFindRefind;
+- (void)showLoginData;
+
+- (void)setServer:(NSString*)server;
+- (NSString*)getServer;
 @end
 
 #endif
