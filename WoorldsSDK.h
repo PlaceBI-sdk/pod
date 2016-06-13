@@ -27,6 +27,9 @@
 - (void)trackAction:(NSString*)campaignId;
 - (void)track:(NSString*)name withData:(NSDictionary*)data;
 - (void)processLaunchOptions:(NSDictionary*)launchOptions;
+- (void)setNotificationsEnabled:(BOOL)enabled;
+- (void)startSdk;
+- (void)stopSdk;
 
 - (void)processUserInfo:(NSDictionary*) userInfo;
 
@@ -39,6 +42,9 @@
 
 - (void)setServer:(NSString*)server;
 - (NSString*)getServer;
+
+- (void)clearCookies;
+
 @end
 
 #endif
