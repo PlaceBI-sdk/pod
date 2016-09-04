@@ -26,10 +26,13 @@
 - (void)trackClick:(NSString*)campaignId;
 - (void)trackAction:(NSString*)campaignId;
 - (void)track:(NSString*)name withData:(NSDictionary*)data;
+- (void)trackAppState:(BOOL*)state;
 - (void)processLaunchOptions:(NSDictionary*)launchOptions;
 - (void)setNotificationsEnabled:(BOOL)enabled;
+- (BOOL)getNotificationsEnabled;
 - (void)startSdk;
 - (void)stopSdk;
+- (void)enterWoorlds;
 
 - (void)processUserInfo:(NSDictionary*) userInfo;
 
