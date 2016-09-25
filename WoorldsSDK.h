@@ -11,7 +11,19 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+@protocol WoorldsNotificationDelegate <NSObject>
+@required
+-(void)notificationSent:(NSDictionary *)notifInfo;
+@end
+
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
+
+//Delegate Methods
+@property (nonatomic, weak) id <WoorldsNotificationDelegate> delegate;
+
+-(void)sendNotification:(NSDictionary *)notifInfo; // Instance method
+//End delegate methods
+
 - (id) init;
 
 + (instancetype)sharedInstance;
