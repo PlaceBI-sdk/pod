@@ -38,7 +38,7 @@
 - (void)trackClick:(NSString*)campaignId;
 - (void)trackAction:(NSString*)campaignId;
 - (void)track:(NSString*)name withData:(NSDictionary*)data;
-- (void)trackAppState:(BOOL*)state;
+- (void)trackAppState:(BOOL)state;
 - (void)processLaunchOptions:(NSDictionary*)launchOptions;
 - (void)setNotificationsEnabled:(BOOL)enabled;
 - (BOOL)getNotificationsEnabled;
