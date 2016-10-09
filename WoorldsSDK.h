@@ -19,9 +19,9 @@
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
 
 //Delegate Methods
-@property (nonatomic, weak) id <WoorldsNotificationDelegate> delegate;
+@property (nonatomic, weak) NSObject <WoorldsNotificationDelegate> *delegate;
 
--(void)sendNotification:(NSDictionary *)notifInfo; // Instance method
+-(void)sendDelegateNotification:(NSDictionary *)notifInfo; // Instance method
 //End delegate methods
 
 - (id) init;
@@ -45,6 +45,7 @@
 - (void)startSdk;
 - (void)stopSdk;
 - (void)enterWoorlds;
+- (void)setDebugMode:(BOOL)debug;
 
 - (void)processUserInfo:(NSDictionary*) userInfo;
 
