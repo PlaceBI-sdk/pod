@@ -45,6 +45,7 @@
 - (void)startSdk;
 - (void)stopSdk;
 - (void)enterWoorlds;
+- (void)enterLeumiCard;
 - (void)setDebugMode:(BOOL)debug;
 
 - (void)processUserInfo:(NSDictionary*) userInfo;
