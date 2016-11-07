@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WoorldsSDK"
-  s.version      = "0.2.9"
+  s.version      = "0.3.0"
   s.summary      = "Woorlds SDK"
 
   s.description  = <<-DESC
