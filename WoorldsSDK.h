@@ -10,6 +10,7 @@
 #define Pods_WoorldsSDK_h
 
 #import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
 
 @protocol WoorldsNotificationDelegate <NSObject>
 @required
