@@ -12,18 +12,21 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CoreMotion.h>
 
-@protocol WoorldsNotificationDelegate <NSObject>
+@protocol WoorldsDelegate <NSObject>
 @required
 -(void)notificationSent:(NSDictionary *)notifInfo;
+-(void)permissionEvent:(NSDictionary *)permission;
 @end
 
 @interface WoorldsSDK : NSObject <CLLocationManagerDelegate>
 
 //Delegate Methods
-@property (nonatomic, weak) NSObject <WoorldsNotificationDelegate> *delegate;
+@property (nonatomic, weak) NSObject <WoorldsDelegate> *delegate;
 
 -(void)sendDelegateNotification:(NSDictionary *)notifInfo; // Instance method
+-(void)sendDelegatePermission:(NSString *)permissionType permissionAllowed:(BOOL)isAllowed; // Instance method
 //End delegate methods
+
 
 - (id) init;
 
@@ -48,6 +51,8 @@
 - (void)enterWoorlds;
 - (void)enterLeumiCard;
 - (void)setDebugMode:(BOOL)debug;
+- (void)startMotionActivity;
+- (void)stopMotionActivity;
 
 - (void)processUserInfo:(NSDictionary*) userInfo;
 
